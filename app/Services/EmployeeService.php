@@ -12,7 +12,7 @@ class EmployeeService
     {
     }
 
-    public function findAll($request)
+    public function findAll(array $request)
     {
         $employees = $this->employeeRepository->findAll($request);
         return $employees;
@@ -44,7 +44,6 @@ class EmployeeService
 
     public function delete(int $id)
     {
-        $employee = $this->employeeRepository->find($id);
-        return $this->employeeRepository->delete($employee);
+        return $this->employeeRepository->delete($id);
     }
 }

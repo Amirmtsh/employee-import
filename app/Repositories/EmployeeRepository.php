@@ -7,16 +7,16 @@ use App\Repositories\Interfaces\ModelRepositoryInterface;
 
 class EmployeeRepository implements ModelRepositoryInterface
 {
-    public function find($id): Employee
+    public function find(int $id): Employee
     {
         return Employee::findOrFail($id);
     }
 
-    public function create($request) {}
+    public function create(array $request) {}
 
-    public function update($id) {}
+    public function update(array $request,int $id) {}
 
-    public function findAll($request)
+    public function findAll(array $request)
     {
         return Employee::filter([
             'search' => $request['search'] ?? null,
@@ -24,8 +24,8 @@ class EmployeeRepository implements ModelRepositoryInterface
         ])->paginate($request['per_page'] ?? 30);
     }
 
-    public function delete($employee)
+    public function delete(int $id)
     {
-        return $employee->delete();
+        $this->find($id)->delete();
     }
 }

@@ -4,13 +4,13 @@ namespace App\Repositories\Interfaces;
 
 interface ModelRepositoryInterface
 {
-    public function find($id);
+    public function find(int $id);
 
-    public function create($request);
+    public function create(array $request);
 
-    public function update($id);
+    public function update(array $request,int $id);
 
-    public function findAll($request);
+    public function findAll(array $request);
 
-    public function delete($employee);
+    public function delete(int $id);
 }
