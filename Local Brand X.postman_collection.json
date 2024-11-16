@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "9d466889-7d2a-4deb-8a52-da28791b39f6",
+		"name": "Local Brand X",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10515075",
+		"_collection_link": "https://lively-eclipse-825820.postman.co/workspace/Solutech~445aa8bf-a83a-498c-bc28-cc43f2b7a0ab/collection/10515075-9d466889-7d2a-4deb-8a52-da28791b39f6?action=share&source=collection_link&creator=10515075"
+	},
+	"item": [
+		{
+			"name": "Get Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/employee",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employee",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.26.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Nov 2024 10:42:25 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"success\",\n    \"pagination\": {\n        \"total\": 9438,\n        \"perPage\": 30,\n        \"currentPage\": 1,\n        \"lastPage\": 315,\n        \"nextPageUrl\": \"http://localhost:8000/api/employee?page=2\",\n        \"previousPageUrl\": null\n    },\n    \"data\": {\n        \"employees\": [\n            {\n                \"id\": 2,\n                \"employee_id\": 178566,\n                \"name_prefix\": \"Mrs.\",\n                \"first_name\": \"Juliette\",\n                \"middle_initial\": \"M\",\n                \"last_name\": \"Rojo\",\n                \"gender\": \"F\",\n                \"email\": \"juliette.rojo@yahoo.co.uk\",\n                \"date_of_birth\": \"1967-05-08\",\n                \"time_of_birth\": \"18:03:23\",\n                \"age_in_years\": 50.26,\n                \"date_of_joining\": \"2011-06-04\",\n                \"age_in_company\": 6.15,\n                \"phone_no\": \"215-254-9594\",\n                \"place_name\": \"Glenside\",\n                \"country\": \"Montgomery\",\n                \"city\": \"Glenside\",\n                \"zip\": \"19038\",\n                \"region\": \"Northeast\",\n                \"username\": \"jmrojo\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"employee_id\": 647173,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Milan\",\n                \"middle_initial\": \"F\",\n                \"last_name\": \"Krawczyk\",\n                \"gender\": \"M\",\n                \"email\": \"milan.krawczyk@hotmail.com\",\n                \"date_of_birth\": \"1980-04-04\",\n                \"time_of_birth\": \"07:07:22\",\n                \"age_in_years\": 37.34,\n                \"date_of_joining\": \"2012-01-19\",\n                \"age_in_company\": 5.53,\n                \"phone_no\": \"240-748-4111\",\n                \"place_name\": \"Gibson Island\",\n                \"country\": \"Anne Arundel\",\n                \"city\": \"Gibson Island\",\n                \"zip\": \"21056\",\n                \"region\": \"South\",\n                \"username\": \"mfkrawczyk\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 4,\n                \"employee_id\": 847634,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Elmer\",\n                \"middle_initial\": \"R\",\n                \"last_name\": \"Jason\",\n                \"gender\": \"M\",\n                \"email\": \"elmer.jason@yahoo.com\",\n                \"date_of_birth\": \"1996-04-09\",\n                \"time_of_birth\": \"00:55:59\",\n                \"age_in_years\": 21.32,\n                \"date_of_joining\": \"2017-05-28\",\n                \"age_in_company\": 0.17,\n                \"phone_no\": \"236-751-5963\",\n                \"place_name\": \"Mendota\",\n                \"country\": \"Washington\",\n                \"city\": \"Mendota\",\n                \"zip\": \"24270\",\n                \"region\": \"South\",\n                \"username\": \"erjason\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"employee_id\": 260736,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Zelda\",\n                \"middle_initial\": \"P\",\n                \"last_name\": \"Forest\",\n                \"gender\": \"F\",\n                \"email\": \"zelda.forest@ibm.com\",\n                \"date_of_birth\": \"1959-11-27\",\n                \"time_of_birth\": \"20:49:14\",\n                \"age_in_years\": 57.71,\n                \"date_of_joining\": \"2014-01-28\",\n                \"age_in_company\": 3.5,\n                \"phone_no\": \"212-268-4076\",\n                \"place_name\": \"Schenectady\",\n                \"country\": \"Schenectady\",\n                \"city\": \"Schenectady\",\n                \"zip\": \"12306\",\n                \"region\": \"Northeast\",\n                \"username\": \"zpforest\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 6,\n                \"employee_id\": 811306,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Rhett\",\n                \"middle_initial\": \"P\",\n                \"last_name\": \"Wan\",\n                \"gender\": \"M\",\n                \"email\": \"rhett.wan@hotmail.com\",\n                \"date_of_birth\": \"1976-07-14\",\n                \"time_of_birth\": \"00:06:19\",\n                \"age_in_years\": 41.07,\n                \"date_of_joining\": \"2009-01-21\",\n                \"age_in_company\": 8.52,\n                \"phone_no\": \"209-984-3789\",\n                \"place_name\": \"Selma\",\n                \"country\": \"Fresno\",\n                \"city\": \"Selma\",\n                \"zip\": \"93662\",\n                \"region\": \"West\",\n                \"username\": \"rpwan\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 7,\n                \"employee_id\": 956633,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Hal\",\n                \"middle_initial\": \"H\",\n                \"last_name\": \"Farrow\",\n                \"gender\": \"M\",\n                \"email\": \"hal.farrow@cox.net\",\n                \"date_of_birth\": \"1967-03-15\",\n                \"time_of_birth\": \"02:45:15\",\n                \"age_in_years\": 50.41,\n                \"date_of_joining\": \"1991-02-25\",\n                \"age_in_company\": 26.44,\n                \"phone_no\": \"209-550-0139\",\n                \"place_name\": \"Modesto\",\n                \"country\": \"Stanislaus\",\n                \"city\": \"Modesto\",\n                \"zip\": \"95353\",\n                \"region\": \"West\",\n                \"username\": \"hhfarrow\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 8,\n                \"employee_id\": 629539,\n                \"name_prefix\": \"Dr.\",\n                \"first_name\": \"Del\",\n                \"middle_initial\": \"I\",\n                \"last_name\": \"Fernandez\",\n                \"gender\": \"M\",\n                \"email\": \"del.fernandez@hotmail.com\",\n                \"date_of_birth\": \"1991-08-13\",\n                \"time_of_birth\": \"21:37:47\",\n                \"age_in_years\": 25.98,\n                \"date_of_joining\": \"2016-04-07\",\n                \"age_in_company\": 1.31,\n                \"phone_no\": \"216-900-3642\",\n                \"place_name\": \"Kent\",\n                \"country\": \"Portage\",\n                \"city\": \"Kent\",\n                \"zip\": \"44243\",\n                \"region\": \"Midwest\",\n                \"username\": \"difernandez\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 9,\n                \"employee_id\": 784160,\n                \"name_prefix\": \"Dr.\",\n                \"first_name\": \"Corey\",\n                \"middle_initial\": \"A\",\n                \"last_name\": \"Jackman\",\n                \"gender\": \"M\",\n                \"email\": \"corey.jackman@gmail.com\",\n                \"date_of_birth\": \"1959-04-12\",\n                \"time_of_birth\": \"12:27:16\",\n                \"age_in_years\": 58.33,\n                \"date_of_joining\": \"1984-06-29\",\n                \"age_in_company\": 33.1,\n                \"phone_no\": \"212-389-8573\",\n                \"place_name\": \"Jamaica\",\n                \"country\": \"Jamaica\",\n                \"city\": \"Jamaica\",\n                \"zip\": \"11480\",\n                \"region\": \"Northeast\",\n                \"username\": \"cajackman\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 10,\n                \"employee_id\": 744723,\n                \"name_prefix\": \"Hon.\",\n                \"first_name\": \"Bibi\",\n                \"middle_initial\": \"H\",\n                \"last_name\": \"Paddock\",\n                \"gender\": \"F\",\n                \"email\": \"bibi.paddock@yahoo.co.in\",\n                \"date_of_birth\": \"1991-10-20\",\n                \"time_of_birth\": \"22:09:34\",\n                \"age_in_years\": 25.79,\n                \"date_of_joining\": \"2016-11-02\",\n                \"age_in_company\": 0.73,\n                \"phone_no\": \"423-355-3751\",\n                \"place_name\": \"Rickman\",\n                \"country\": \"Overton\",\n                \"city\": \"Rickman\",\n                \"zip\": \"38580\",\n                \"region\": \"South\",\n                \"username\": \"bhpaddock\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 11,\n                \"employee_id\": 423093,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Eric\",\n                \"middle_initial\": \"O\",\n                \"last_name\": \"Manning\",\n                \"gender\": \"M\",\n                \"email\": \"eric.manning@yahoo.com\",\n                \"date_of_birth\": \"1980-11-02\",\n                \"time_of_birth\": \"20:48:01\",\n                \"age_in_years\": 36.76,\n                \"date_of_joining\": \"2002-10-28\",\n                \"age_in_company\": 14.76,\n                \"phone_no\": \"319-913-5811\",\n                \"place_name\": \"Clermont\",\n                \"country\": \"Fayette\",\n                \"city\": \"Clermont\",\n                \"zip\": \"52135\",\n                \"region\": \"Midwest\",\n                \"username\": \"eomanning\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 12,\n                \"employee_id\": 207808,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Renetta\",\n                \"middle_initial\": \"T\",\n                \"last_name\": \"Hafner\",\n                \"gender\": \"F\",\n                \"email\": \"renetta.hafner@aol.com\",\n                \"date_of_birth\": \"1975-01-29\",\n                \"time_of_birth\": \"11:50:51\",\n                \"age_in_years\": 42.52,\n                \"date_of_joining\": \"1998-08-22\",\n                \"age_in_company\": 18.95,\n                \"phone_no\": \"239-664-4998\",\n                \"place_name\": \"Fort Lauderdale\",\n                \"country\": \"Broward\",\n                \"city\": \"Fort Lauderdale\",\n                \"zip\": \"33335\",\n                \"region\": \"South\",\n                \"username\": \"rthafner\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 13,\n                \"employee_id\": 338634,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Paz\",\n                \"middle_initial\": \"T\",\n                \"last_name\": \"Pearman\",\n                \"gender\": \"F\",\n                \"email\": \"paz.pearman@gmail.com\",\n                \"date_of_birth\": \"1960-02-28\",\n                \"time_of_birth\": \"20:35:18\",\n                \"age_in_years\": 57.45,\n                \"date_of_joining\": \"1982-05-25\",\n                \"age_in_company\": 35.2,\n                \"phone_no\": \"319-435-3438\",\n                \"place_name\": \"Garnavillo\",\n                \"country\": \"Clayton\",\n                \"city\": \"Garnavillo\",\n                \"zip\": \"52049\",\n                \"region\": \"Midwest\",\n                \"username\": \"ptpearman\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 14,\n                \"employee_id\": 324573,\n                \"name_prefix\": \"Hon.\",\n                \"first_name\": \"Ardath\",\n                \"middle_initial\": \"Q\",\n                \"last_name\": \"Forman\",\n                \"gender\": \"F\",\n                \"email\": \"ardath.forman@gmail.com\",\n                \"date_of_birth\": \"1982-11-12\",\n                \"time_of_birth\": \"04:54:17\",\n                \"age_in_years\": 34.73,\n                \"date_of_joining\": \"2009-10-16\",\n                \"age_in_company\": 7.79,\n                \"phone_no\": \"229-447-5924\",\n                \"place_name\": \"Athens\",\n                \"country\": \"Clarke\",\n                \"city\": \"Athens\",\n                \"zip\": \"30602\",\n                \"region\": \"South\",\n                \"username\": \"aqforman\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 15,\n                \"employee_id\": 953724,\n                \"name_prefix\": \"Mrs.\",\n                \"first_name\": \"Nanci\",\n                \"middle_initial\": \"D\",\n                \"last_name\": \"Osorio\",\n                \"gender\": \"F\",\n                \"email\": \"nanci.osorio@hotmail.com\",\n                \"date_of_birth\": \"1982-07-09\",\n                \"time_of_birth\": \"12:02:26\",\n                \"age_in_years\": 35.08,\n                \"date_of_joining\": \"2003-11-07\",\n                \"age_in_company\": 13.73,\n                \"phone_no\": \"603-298-3198\",\n                \"place_name\": \"Lincoln\",\n                \"country\": \"Grafton\",\n                \"city\": \"Lincoln\",\n                \"zip\": \"3251\",\n                \"region\": \"Northeast\",\n                \"username\": \"ndosorio\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 16,\n                \"employee_id\": 138700,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Maricela\",\n                \"middle_initial\": \"H\",\n                \"last_name\": \"Simard\",\n                \"gender\": \"F\",\n                \"email\": \"maricela.simard@gmail.com\",\n                \"date_of_birth\": \"1988-07-21\",\n                \"time_of_birth\": \"19:06:17\",\n                \"age_in_years\": 29.04,\n                \"date_of_joining\": \"2016-09-25\",\n                \"age_in_company\": 0.84,\n                \"phone_no\": \"252-383-7726\",\n                \"place_name\": \"Ingold\",\n                \"country\": \"Sampson\",\n                \"city\": \"Ingold\",\n                \"zip\": \"28446\",\n                \"region\": \"South\",\n                \"username\": \"mhsimard\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 17,\n                \"employee_id\": 644265,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Avelina\",\n                \"middle_initial\": \"I\",\n                \"last_name\": \"Stoner\",\n                \"gender\": \"F\",\n                \"email\": \"avelina.stoner@exxonmobil.com\",\n                \"date_of_birth\": \"1988-10-01\",\n                \"time_of_birth\": \"12:15:44\",\n                \"age_in_years\": 28.84,\n                \"date_of_joining\": \"2010-11-30\",\n                \"age_in_company\": 6.66,\n                \"phone_no\": \"215-329-1990\",\n                \"place_name\": \"Salina\",\n                \"country\": \"Westmoreland\",\n                \"city\": \"Salina\",\n                \"zip\": \"15680\",\n                \"region\": \"Northeast\",\n                \"username\": \"aistoner\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 18,\n                \"employee_id\": 223871,\n                \"name_prefix\": \"Drs.\",\n                \"first_name\": \"Christene\",\n                \"middle_initial\": \"O\",\n                \"last_name\": \"Mattison\",\n                \"gender\": \"F\",\n                \"email\": \"christene.mattison@gmail.com\",\n                \"date_of_birth\": \"1990-09-14\",\n                \"time_of_birth\": \"09:43:32\",\n                \"age_in_years\": 26.89,\n                \"date_of_joining\": \"2015-09-13\",\n                \"age_in_company\": 1.87,\n                \"phone_no\": \"314-561-9256\",\n                \"place_name\": \"Alba\",\n                \"country\": \"Jasper\",\n                \"city\": \"Alba\",\n                \"zip\": \"64830\",\n                \"region\": \"Midwest\",\n                \"username\": \"comattison\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 19,\n                \"employee_id\": 807262,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Stefan\",\n                \"middle_initial\": \"O\",\n                \"last_name\": \"Maeda\",\n                \"gender\": \"M\",\n                \"email\": \"stefan.maeda@yahoo.com\",\n                \"date_of_birth\": \"1990-03-23\",\n                \"time_of_birth\": \"09:14:56\",\n                \"age_in_years\": 27.37,\n                \"date_of_joining\": \"2011-11-05\",\n                \"age_in_company\": 5.73,\n                \"phone_no\": \"225-889-6869\",\n                \"place_name\": \"Slidell\",\n                \"country\": \"St. Tammany\",\n                \"city\": \"Slidell\",\n                \"zip\": \"70461\",\n                \"region\": \"South\",\n                \"username\": \"somaeda\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 20,\n                \"employee_id\": 368234,\n                \"name_prefix\": \"Drs.\",\n                \"first_name\": \"Gillian\",\n                \"middle_initial\": \"T\",\n                \"last_name\": \"Winter\",\n                \"gender\": \"F\",\n                \"email\": \"gillian.winter@gmail.com\",\n                \"date_of_birth\": \"1960-01-17\",\n                \"time_of_birth\": \"14:25:49\",\n                \"age_in_years\": 57.57,\n                \"date_of_joining\": \"1984-11-28\",\n                \"age_in_company\": 32.68,\n                \"phone_no\": \"505-325-2023\",\n                \"place_name\": \"Alamogordo\",\n                \"country\": \"Otero\",\n                \"city\": \"Alamogordo\",\n                \"zip\": \"88310\",\n                \"region\": \"West\",\n                \"username\": \"gtwinter\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 21,\n                \"employee_id\": 807442,\n                \"name_prefix\": \"Hon.\",\n                \"first_name\": \"Ed\",\n                \"middle_initial\": \"E\",\n                \"last_name\": \"Ferrari\",\n                \"gender\": \"M\",\n                \"email\": \"ed.ferrari@gmail.com\",\n                \"date_of_birth\": \"1981-09-27\",\n                \"time_of_birth\": \"07:31:47\",\n                \"age_in_years\": 35.86,\n                \"date_of_joining\": \"2015-02-15\",\n                \"age_in_company\": 2.45,\n                \"phone_no\": \"210-319-0049\",\n                \"place_name\": \"Gardendale\",\n                \"country\": \"Ector\",\n                \"city\": \"Gardendale\",\n                \"zip\": \"79758\",\n                \"region\": \"South\",\n                \"username\": \"eeferrari\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 22,\n                \"employee_id\": 956778,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Jewell\",\n                \"middle_initial\": \"L\",\n                \"last_name\": \"Thies\",\n                \"gender\": \"F\",\n                \"email\": \"jewell.thies@aol.com\",\n                \"date_of_birth\": \"1991-02-16\",\n                \"time_of_birth\": \"11:29:52\",\n                \"age_in_years\": 26.46,\n                \"date_of_joining\": \"2017-04-28\",\n                \"age_in_company\": 0.25,\n                \"phone_no\": \"405-727-5191\",\n                \"place_name\": \"Oklahoma City\",\n                \"country\": \"Oklahoma City\",\n                \"city\": \"Oklahoma City\",\n                \"zip\": \"73100\",\n                \"region\": \"South\",\n                \"username\": \"jlthies\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 23,\n                \"employee_id\": 496781,\n                \"name_prefix\": \"Dr.\",\n                \"first_name\": \"Jonathan\",\n                \"middle_initial\": \"Z\",\n                \"last_name\": \"Rosa\",\n                \"gender\": \"M\",\n                \"email\": \"jonathan.rosa@gmail.com\",\n                \"date_of_birth\": \"1981-02-19\",\n                \"time_of_birth\": \"05:51:15\",\n                \"age_in_years\": 36.46,\n                \"date_of_joining\": \"2010-07-23\",\n                \"age_in_company\": 7.02,\n                \"phone_no\": \"236-696-3896\",\n                \"place_name\": \"Falls Church\",\n                \"country\": \"Fairfax\",\n                \"city\": \"Falls Church\",\n                \"zip\": \"22047\",\n                \"region\": \"South\",\n                \"username\": \"jzrosa\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 24,\n                \"employee_id\": 301629,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Ruben\",\n                \"middle_initial\": \"L\",\n                \"last_name\": \"Weissman\",\n                \"gender\": \"M\",\n                \"email\": \"ruben.weissman@gmail.com\",\n                \"date_of_birth\": \"1995-12-28\",\n                \"time_of_birth\": \"23:07:05\",\n                \"age_in_years\": 21.6,\n                \"date_of_joining\": \"2017-01-03\",\n                \"age_in_company\": 0.56,\n                \"phone_no\": \"201-979-0583\",\n                \"place_name\": \"Elmwood Park\",\n                \"country\": \"Bergen\",\n                \"city\": \"Elmwood Park\",\n                \"zip\": \"7407\",\n                \"region\": \"Northeast\",\n                \"username\": \"rlweissman\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 25,\n                \"employee_id\": 668065,\n                \"name_prefix\": \"Mrs.\",\n                \"first_name\": \"Deja\",\n                \"middle_initial\": \"H\",\n                \"last_name\": \"Niemeyer\",\n                \"gender\": \"F\",\n                \"email\": \"deja.niemeyer@gmail.com\",\n                \"date_of_birth\": \"1961-09-04\",\n                \"time_of_birth\": \"04:37:10\",\n                \"age_in_years\": 55.93,\n                \"date_of_joining\": \"2012-06-05\",\n                \"age_in_company\": 5.15,\n                \"phone_no\": \"210-777-5935\",\n                \"place_name\": \"Evadale\",\n                \"country\": \"Jasper\",\n                \"city\": \"Evadale\",\n                \"zip\": \"77615\",\n                \"region\": \"South\",\n                \"username\": \"dhniemeyer\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 26,\n                \"employee_id\": 836931,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Selene\",\n                \"middle_initial\": \"S\",\n                \"last_name\": \"Ford\",\n                \"gender\": \"F\",\n                \"email\": \"selene.ford@aol.com\",\n                \"date_of_birth\": \"1992-03-23\",\n                \"time_of_birth\": \"00:38:12\",\n                \"age_in_years\": 25.36,\n                \"date_of_joining\": \"2013-10-07\",\n                \"age_in_company\": 3.81,\n                \"phone_no\": \"203-799-7675\",\n                \"place_name\": \"Hartford\",\n                \"country\": \"Hartford\",\n                \"city\": \"Hartford\",\n                \"zip\": \"6101\",\n                \"region\": \"Northeast\",\n                \"username\": \"ssford\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 27,\n                \"employee_id\": 914698,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Janeen\",\n                \"middle_initial\": \"M\",\n                \"last_name\": \"Norman\",\n                \"gender\": \"F\",\n                \"email\": \"janeen.norman@gmail.com\",\n                \"date_of_birth\": \"1989-01-28\",\n                \"time_of_birth\": \"18:35:10\",\n                \"age_in_years\": 28.52,\n                \"date_of_joining\": \"2012-01-05\",\n                \"age_in_company\": 5.5600000000000005,\n                \"phone_no\": \"803-953-3848\",\n                \"place_name\": \"Columbia\",\n                \"country\": \"Richland\",\n                \"city\": \"Columbia\",\n                \"zip\": \"29224\",\n                \"region\": \"South\",\n                \"username\": \"jmnorman\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 28,\n                \"employee_id\": 872750,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Johnnie\",\n                \"middle_initial\": \"J\",\n                \"last_name\": \"Ibarra\",\n                \"gender\": \"M\",\n                \"email\": \"johnnie.ibarra@aol.com\",\n                \"date_of_birth\": \"1972-01-10\",\n                \"time_of_birth\": \"18:04:09\",\n                \"age_in_years\": 45.58,\n                \"date_of_joining\": \"2013-04-14\",\n                \"age_in_company\": 4.29,\n                \"phone_no\": \"209-862-8601\",\n                \"place_name\": \"San Diego\",\n                \"country\": \"San Diego\",\n                \"city\": \"San Diego\",\n                \"zip\": \"92142\",\n                \"region\": \"West\",\n                \"username\": \"jjibarra\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 29,\n                \"employee_id\": 813428,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Emerson\",\n                \"middle_initial\": \"L\",\n                \"last_name\": \"Sands\",\n                \"gender\": \"M\",\n                \"email\": \"emerson.sands@gmail.com\",\n                \"date_of_birth\": \"1978-07-08\",\n                \"time_of_birth\": \"22:18:04\",\n                \"age_in_years\": 39.08,\n                \"date_of_joining\": \"2015-01-01\",\n                \"age_in_company\": 2.57,\n                \"phone_no\": \"231-399-0470\",\n                \"place_name\": \"Dowagiac\",\n                \"country\": \"Cass\",\n                \"city\": \"Dowagiac\",\n                \"zip\": \"49047\",\n                \"region\": \"Midwest\",\n                \"username\": \"elsands\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 30,\n                \"employee_id\": 380228,\n                \"name_prefix\": \"Mr.\",\n                \"first_name\": \"Oswaldo\",\n                \"middle_initial\": \"V\",\n                \"last_name\": \"Dodd\",\n                \"gender\": \"M\",\n                \"email\": \"oswaldo.dodd@gmail.com\",\n                \"date_of_birth\": \"1975-11-24\",\n                \"time_of_birth\": \"03:24:57\",\n                \"age_in_years\": 41.7,\n                \"date_of_joining\": \"1998-11-14\",\n                \"age_in_company\": 18.72,\n                \"phone_no\": \"229-954-3152\",\n                \"place_name\": \"Harrison\",\n                \"country\": \"Washington\",\n                \"city\": \"Harrison\",\n                \"zip\": \"31035\",\n                \"region\": \"South\",\n                \"username\": \"ovdodd\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            },\n            {\n                \"id\": 31,\n                \"employee_id\": 791100,\n                \"name_prefix\": \"Ms.\",\n                \"first_name\": \"Leone\",\n                \"middle_initial\": \"Y\",\n                \"last_name\": \"Buss\",\n                \"gender\": \"F\",\n                \"email\": \"leone.buss@yahoo.co.uk\",\n                \"date_of_birth\": \"1968-01-31\",\n                \"time_of_birth\": \"02:26:33\",\n                \"age_in_years\": 49.52,\n                \"date_of_joining\": \"1996-12-31\",\n                \"age_in_company\": 20.59,\n                \"phone_no\": \"207-521-8795\",\n                \"place_name\": \"Bryant Pond\",\n                \"country\": \"Oxford\",\n                \"city\": \"Bryant Pond\",\n                \"zip\": \"4219\",\n                \"region\": \"Northeast\",\n                \"username\": \"lybuss\",\n                \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n                \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Import Employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/amir/Downloads/import.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/employee",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/amir/Downloads/import.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employee",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.26.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Nov 2024 10:10:59 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"successfully deleted employee!\",\n    \"pagination\": null,\n    \"data\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Show Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/employee/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"employee",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employee/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.26.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Nov 2024 10:43:19 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"success\",\n    \"pagination\": null,\n    \"data\": {\n        \"employees\": {\n            \"id\": 2,\n            \"employee_id\": 178566,\n            \"name_prefix\": \"Mrs.\",\n            \"first_name\": \"Juliette\",\n            \"middle_initial\": \"M\",\n            \"last_name\": \"Rojo\",\n            \"gender\": \"F\",\n            \"email\": \"juliette.rojo@yahoo.co.uk\",\n            \"date_of_birth\": \"1967-05-08\",\n            \"time_of_birth\": \"18:03:23\",\n            \"age_in_years\": 50.26,\n            \"date_of_joining\": \"2011-06-04\",\n            \"age_in_company\": 6.15,\n            \"phone_no\": \"215-254-9594\",\n            \"place_name\": \"Glenside\",\n            \"country\": \"Montgomery\",\n            \"city\": \"Glenside\",\n            \"zip\": \"19038\",\n            \"region\": \"Northeast\",\n            \"username\": \"jmrojo\",\n            \"created_at\": \"2024-11-16T10:11:05.000000Z\",\n            \"updated_at\": \"2024-11-16T10:11:05.000000Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/employee/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"employee",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employee/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.26.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Nov 2024 10:39:11 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"successfully deleted employee!\",\n    \"pagination\": null,\n    \"data\": []\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.request.headers.add({",
+					"  key: \"Accept\",",
+					"  value: \"application/json\"",
+					"});",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
