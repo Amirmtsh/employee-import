@@ -11,7 +11,7 @@ services:
         volumes:
             - ./storage:/app/storage
         depends_on:
-            - postgres
+            - mariadb
             - redis
         restart: unless-stopped
 
@@ -30,48 +30,33 @@ services:
             timeout: 5s
         user: root
 
-    postgres:
-        image: "${POSTGRES_IMAGE}"
-        container_name: "${POSTGRES_CONTAINER_NAME}"
-        hostname: "${POSTGRES_HOSTNAME}"
+    mariadb:
+        image: "${MARIADB_IMAGE}"
+        container_name: "${MARIADB_CONTAINER_NAME}"
+        hostname: "${MARIADB_HOSTNAME}"
         environment:
-            POSTGRES_USER: ${POSTGRES_USER:-postgres}
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-            POSTGRES_DB: "${POSTGRES_DATABASE}"
-            PGPASSWORD: "${POSTGRES_PASSWORD:-secret}"
+            MYSQL_ROOT_PASSWORD: "${MARIADB_ROOT_PASSWORD}"
+            MYSQL_DATABASE: "${MARIADB_DATABASE}"
             TZ: "${TZ}"
         volumes:
-            - ./docker/storage/postgres:/var/lib/postgresql/data
+            - ./docker/storage/mariadb:/var/lib/mysql
         healthcheck:
-            test:
-                [
-                    "CMD",
-                    "pg_isready",
-                    "-q",
-                    "-d",
-                    "${POSTGRES_DATABASE}",
-                    "-U",
-                    "${POSTGRES_USER}",
-                ]
+            test: ["CMD", "mysqladmin", "ping", "-p${MARIADB_ROOT_PASSWORD}"]
             retries: 3
             timeout: 5s
         user: root
 
-    pgadmin:
-        image: "${PGADMIN_IMAGE}"
-        container_name: "${PGADMIN_CONTAINER_NAME}"
-        hostname: "${PGADMIN_HOSTNAME}"
-        environment:
-            TZ: "${TZ}"
-            PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
-            PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
-        volumes:
-            - ./docker/storage/pgadmin:/var/lib/pgadmin
+    phpmyadmin:
+        image: "${PHPMYADMIN_IMAGE}"
+        container_name: "${PHPMYADMIN_CONTAINER_NAME}"
+        hostname: "${PHPMYADMIN_HOSTNAME}"
         ports:
-            - 5050:80
-        user: root
-        depends_on:
-            - postgres
+            - "5050:80"
+        environment:
+            PMA_HOST: "${MARIADB_HOSTNAME}"
+            PMA_PMADB: phpmyadmin
+            UPLOAD_LIMIT: 300m
+            TZ: "${TZ}"
 
 networks:
     default:

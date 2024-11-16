@@ -34,7 +34,7 @@ class ApiResponse
     private string $message;
     private array $data;
     private array $headers = [];
-    private array $pagination;
+    private array|null $pagination;
 
     function __construct(array $data = [])
     {

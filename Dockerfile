@@ -10,7 +10,6 @@ RUN composer install --no-interaction --optimize-autoloader
 
 COPY entrypoint.sh /opt/docker/provision/entrypoint.d/
 COPY supervosord-horizon.conf /opt/docker/etc/supervisor.d/
-COPY .env.example ./.env
 
 RUN php artisan storage:link && php artisan optimize && php artisan key:generate
 
