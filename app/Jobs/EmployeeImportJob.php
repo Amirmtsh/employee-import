@@ -19,7 +19,7 @@ class EmployeeImportJob implements ShouldQueue
     /**
      * Create a new job instance.
      */
-    public function __construct(private $excel)
+    public function __construct(private string $excelPath)
     {
         $this->onQueue('default_long');
     }
@@ -30,7 +30,7 @@ class EmployeeImportJob implements ShouldQueue
     public function handle(): void
     {
         $import = new EmployeesImport();
-        $import->import(filePath: $this->excel, disk: 'local');
+        $import->import(filePath: $this->excelPath, disk: 'local');
 
         if ($import->failures()->isNotEmpty()) {
             EmployeeImportFailed::dispatch($import->failures());

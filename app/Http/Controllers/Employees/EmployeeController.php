@@ -34,7 +34,7 @@ class EmployeeController extends Controller
         $employee = $service->find($id);
 
         return $this->apiResponse
-            ->setData('employees', $employee)
+            ->setData('employee', $employee)
             ->json();
     }
 

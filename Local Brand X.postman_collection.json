@@ -19,6 +19,23 @@
 					],
 					"path": [
 						"employee"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "juli",
+							"disabled": true
+						},
+						{
+							"key": "per_page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						}
 					]
 				}
 			},

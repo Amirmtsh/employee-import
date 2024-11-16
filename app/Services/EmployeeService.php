@@ -36,13 +36,13 @@ class EmployeeService
         return $filePath;
     }
 
-    public function find($id)
+    public function find(int $id)
     {
         $employee = $this->employeeRepository->find($id);
         return $employee;
     }
 
-    public function delete($id)
+    public function delete(int $id)
     {
         $employee = $this->employeeRepository->find($id);
         return $this->employeeRepository->delete($employee);
