@@ -27,6 +27,9 @@ cd employee-import
 cp .env.example .env
 ```
 ```shell
+docker network create app
+```
+```shell
 docker compose up -d
 ```
 
