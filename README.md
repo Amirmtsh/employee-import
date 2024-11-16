@@ -8,6 +8,12 @@ using queues brings up another problem: notifying users of their file problems. 
 so I implemented an event-broadcasting system so that the front end could connect to the WebSocket, listen for these events, and show proper error messages.
 Because this wasn't a real project I did not configure WebSocket otherwise I would install Laravel Reverb to handle websockets.
 
+If this was a real project it probably had some authorization with Laravel passport and some authority check with token abilities or permissions. 
+Ideally, this would have a remote storage system like minio running on docker where the user first uploads the excel there so this does not take resources on the main service and just sends a storage service link in the import service.
+with the implementation of WebSockets and broadcasting, we can even use some progress bar to the user so he/she can know how much time is remaining.
+
+without websocket we can implement a job checking service with job uuid where the front end stores the job uuid and asks about the progress every 10 seconds for example. 
+
 ### Installation guide
 
 #### Docker
