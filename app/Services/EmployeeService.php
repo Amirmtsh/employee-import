@@ -2,9 +2,10 @@
 
 namespace App\Services;
 
+use App\Helpers\UploadHelper;
 use App\Jobs\EmployeeImportJob;
 use App\Repositories\EmployeeRepository;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\UploadedFile;
 
 class EmployeeService
 {
@@ -18,22 +19,10 @@ class EmployeeService
         return $employees;
     }
 
-    public function import($file)
+    public function import(UploadedFile $file)
     {
-        $filePath = $this->storeFileinTempStorage($file);
+        $filePath = UploadHelper::store($file, 'tmp/employees/excel-imports');
         EmployeeImportJob::dispatch($filePath);
-    }
-
-    private function storeFileinTempStorage($file)
-    {
-        $path = 'tmp/employees/excel-imports';
-        $filePath = Storage::disk('local')->putFileAs(
-            $path,
-            $file,
-            $file->getClientOriginalName()
-        );
-
-        return $filePath;
     }
 
     public function find(int $id)

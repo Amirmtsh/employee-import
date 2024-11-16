@@ -4,6 +4,7 @@ namespace App\Imports;
 
 use App\Models\Employee;
 use Carbon\Carbon;
+use Illuminate\Validation\Rule;
 use Maatwebsite\Excel\Concerns\Importable;
 use Maatwebsite\Excel\Concerns\SkipsEmptyRows;
 use Maatwebsite\Excel\Concerns\SkipsErrors;
@@ -64,7 +65,7 @@ class EmployeesImport implements ToModel, SkipsEmptyRows, WithValidation, WithHe
             'first_name' => ['required', 'string', 'min:1', 'max:50'],
             'middle_initial' => ['required', 'string', 'min:1', 'max:10'],
             'last_name' => ['required', 'string', 'min:1', 'max:50'],
-            'gender' => ['required', 'string', 'in:M,F'],
+            'gender' => ['required', 'string', Rule::in(Employee::GENDERS)],
             'e_mail' => ['required', 'email', 'min:4', 'max:150'],
             'date_of_birth' => ['required', 'string', 'regex:/^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/\d{4}$/'],
             'time_of_birth' => ['required', 'string', 'regex:/^((0?[1-9]|1[0-2]):([0-5][0-9]):([0-5][0-9]) (AM|PM))$/'],
